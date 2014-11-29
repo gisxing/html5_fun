@@ -9,10 +9,11 @@ var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.fillStyle = "#6ADCD8";
 
-        var s = '子非鱼';
+        var s = ' 中文字體';
         var fontSize = 860/(s.length);
         if (fontSize > 160) fontSize = 160;
-        ctx.font = "900 "+fontSize+"px 'Source Sans Pro'";
+        //ctx.font = "900 "+fontSize+"px 'Source Sans Pro'";
+        ctx.font = "900 "+fontSize+"px 'STSong'";
         ctx.textAlign = 'left';
         ctx.fillText(s,10,130);
 

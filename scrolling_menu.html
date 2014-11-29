@@ -1,0 +1,116 @@
+<html>
+<body >
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <style>
+        .voffset  { margin-top: 680px; }
+        .voffset1  { margin-top: 340px; }
+    </style>
+    <title>Smooth Page Scroll</title>
+    
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+
+    <script>
+    $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 800 ,'easeInOutExpo' );
+            return false;
+          }
+        }
+      });
+    });
+    </script>
+</head>
+<div class="row" id="top" > </div>
+<div class="row voffset1" >
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">第一步</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                        <div class="col-md-10">关注 ^拍享^</div>
+                        <div class="col-md-2"> <a href="#two">-jump-</a></div>
+                </div><!-- /row in panel-body -->
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2"></div>
+</div>
+
+<div class="row voffset" id="two">
+<div class="row voffset1" >
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">第二步</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row" >
+                        <div class="col-md-10">创建墙</div>
+                        <div class="col-md-2"> <a href="#three">-jump-</a></div>
+                </div><!-- /row in panel-body -->
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2"></div>
+</div>
+
+        
+<div class="row voffset" id="three">
+<div class="row voffset1">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">第三步</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row" id="three">
+                        <div class="col-md-10">分享你的 二维码  访问你的墙地址</div>
+                        <div class="col-md-2"> <a href="#four">-jump-</a></div>
+                </div><!-- /row in panel-body -->
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2"></div>
+</div>
+
+
+<div class="row voffset" id="four">
+<div class="row voffset1">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">完成!</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row" id="three">
+                        <div class="col-md-10">进入拍享的欢乐世界吧</div>
+                        <div class="col-md-2"> <a href="#top">-top-</a></div>
+                </div><!-- /row in panel-body -->
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2"></div>
+</div>
+
+<div class="row voffset" id="bottom"></div>
+
+
+</body>
+</html>
